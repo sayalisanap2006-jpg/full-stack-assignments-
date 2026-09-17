@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+}
+
+nav {
+    background-color: #17202a;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav .active {
+    color: #f4b400;
+    font-weight: bold;
+}
+
+.login-box {
+    background-color: white;
+    width: 330px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #17202a;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 93%;
+    padding: 11px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+    border-color: #f4b400;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #17202a;
+    color: #f4b400;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+.password-info {
+    text-align: left;
+    font-size: 13px;
+    margin: 5px 0 15px;
+}
+
+.password-info p {
+    color: #e74c3c;
+    margin: 5px 0;
+}
+
+.password-info p.valid {
+    color: #2ecc71;
+}
+
+#loginMessage,
+#signupMessage {
+    text-align: center;
+    font-weight: bold;
+}
+
+.login-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightblue;
+    font-family: Arial;
+}
+
+.box {
+    text-align: center;
+    background-color: white;
+
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px gray;
+}
+
+h1 {
+    color: darkblue;
+}
+
+button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: darkblue;
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
