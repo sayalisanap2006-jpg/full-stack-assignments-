@@ -1,0 +1,61 @@
+/* 1. Initialize Database */
+use("sayali_db");
+
+/* 2. Add a Single Record */
+db.learners.insertOne({
+    name: "Sayali",
+    age: 21,
+    city: "Pune",
+    course: "Computer Engineering",
+    marks: 91
+});
+
+/* 3. Add Multiple Records */
+db.learners.insertMany([
+    { name: "Sneha", age: 22, city: "Mumbai", course: "IT", marks: 88 },
+    { name: "Aarav", age: 19, city: "Pune", course: "Data Science", marks: 76 },
+    { name: "Priya", age: 20, city: "Nagpur", course: "IT", marks: 84 },
+    { name: "Rohan", age: 21, city: "Mumbai", course: "Computer Engineering", marks: 70 }
+]);
+
+/* 4. Fetch All Data */
+db.learners.find({});
+
+/* 5. Conditional Search (Find learners older than 20) */
+db.learners.find({ age: { $gt: 20 } });
+
+/* 6. Modify One Record */
+db.learners.updateOne(
+    { name: "Sayali" },
+    { $set: { marks: 96 } }
+);
+
+/* 7. Modify Multiple Records */
+db.learners.updateMany(
+    { course: "IT" },
+    { $set: { course: "Information Technology" } }
+);
+
+/* 8. Remove a Single Record */
+db.learners.deleteOne({ name: "Rohan" });
+
+/* 9. Remove Multiple Records */
+db.learners.deleteMany({ city: "Mumbai" });
+
+/* 10. Sort Data (By age, ascending) */
+db.learners.find({}).sort({ age: 1 });
+
+/* 11. Filter Columns (Show name and marks, hide ID) */
+db.learners.find({}, { _id: 0, name: 1, marks: 1 });
+
+/* 12. Total Document Count */
+db.learners.countDocuments({});
+
+/* 13. Limit Output to 1 */
+db.learners.find({}).limit(1);
+
+/* 14. Delete the Collection */
+db.learners.drop();
+
+/* 15. Delete the Database */
+db.dropDatabase();
